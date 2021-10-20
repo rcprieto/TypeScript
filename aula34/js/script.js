@@ -1,3 +1,5 @@
+// Ctrl+Shift+L (which is editor.action.selectHighlights) replace all
+
 function meuEscopo() {
   const form = document.querySelector(".formulario");
   /* form.onsubmit = function (event) {
