@@ -1,0 +1,5 @@
+mongodb+srv://rprieto:924822@cursonode.nsqsf.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+
+
+
+https://cloud.mongodb.com/v2/61eeb0dc94ca92216ca2e65c#clusters
