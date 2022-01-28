@@ -1,4 +1,4 @@
-mongodb+srv://rprieto:924822@cursonode.nsqsf.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+
 
 
 
