@@ -1,0 +1,13 @@
+<%- include('includes/head') %> Aqui aceita HTML - na frente
+<% if(typeof titulo!= 'undefined') { %>
+<%-titulo %> <%}%>
+     <% numeros.forEach(num => { %>
+<%=num%>
+<% }); %>
+<%=csrfToken%>
+<form action="/" method="post">
+     <input type="hidden" name="_csrf" value="<%=csrfToken%>" />
+     <input type="text" name="cliente" />
+     <input type="submit">Enviar</input>
+</form>
+<%- include('includes/footer') %>

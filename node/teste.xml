@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OTA_HotelPmsInfoNotif xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="OTA_HotelPmsInfoNotif.xsd" EchoToken="PMS" TimeStamp="2022-01-27T09:05:40.723" Version="0.1" PrimaryLangID="BR" ClosureDate="2022-01-26" SequenceNmbr="1" RetransmissionIndicator="false">
+    <POS>
+        <Source>
+            <RequestorID Type="18" ID="FFL" ID_Context="accor"/>
+        </Source>
+        <Source ISOCountry="BR" ISOCurrency="BRL">
+            <RequestorID Type="10" ID="H9560" ID_Context="tars">
+                <CompanyName>ibis budget Muriaé
+                </CompanyName>
+            </RequestorID>
+        </Source>
+    </POS>
+
+
+    <PON>
+        <DestinationSystems>
+            <DestinationSystem DecimalPlaces="2" NumberOfDays="800" ReservationExportInd="Yes" ProfileExportInd="Yes" HistoricExportInd="Yes" PostingExportInd="Yes" TrackingInd="Yes">
+                <DestinationSystemID ID="FFL" Type="18" ID_Context="accor"/>
+            </DestinationSystem>
+        </DestinationSystems>
+    </PON>
+
+
+    <BaseRates>
+        <RateAmountMessage>
+            <StatusApplicationControl RatePlanCode="RA1">
+                <Rates>
+                    <Rate>
+                        <BaseByGuestAmts>
+                            <BaseByGuestAmt AmountAfterTax="10800" CurrencyCode="BRL" NumberOfGuests="1"/>
+                            <BaseByGuestAmt AmountAfterTax="14800" CurrencyCode="BRL" NumberOfGuests="2"/>
+                        </BaseByGuestAmts>
+                    </Rate>
+                </Rates>
+            </StatusApplicationControl>
+        </RateAmountMessage>
+    </BaseRates>
+
+
+    <Profiles>
+        <ProfileInfo>
+            <Profile ProfileType="3" CreateDateTime="2019-03-06T19:40:00" LastModifyDateTime="2022-01-06T13:53:00">
+                <ProfileID Type="21" ID="8885" ID_Context="accor"/>
+                <ProfileRefs Type="18" RefID_Source="Accor" RefID_SourceContext="PMID"/>
+                <Customer>
+                    <PersonName>
+                        <NamePrefix>MR
+                        </NamePrefix>
+                        <GivenName/>
+                        <Surname>MARQUESPAN INDUSTRIA DE ALIMEN
+                        </Surname>
+                    </PersonName>
+                    <Addresses>
+                        <Address DefaultInd="true" Type="1">
+                            <Description>Home Address
+                            </Description>
+                            <AddressLines>
+                                <AddressLine>Rua Anna Inghes Del Fiol
+                                </AddressLine>
+                            </AddressLines>
+                            <CityName>Tatuí
+                            </CityName>
+                            <PostalCode>18280005
+                            </PostalCode>
+                            <StateProv StateCode="BRSP">SÃO PAULO
+                            </StateProv>
+                            <CountryName Code="BR"/>
+                        </Address>
+                        <CitizenCountryName Code="BR"/>
+                    </Addresses>
+                    <Document DocIssueLocation="" DocIssueCountry="" DocHolderNationality=""/>
+                </Customer>
+                <CompanyInfo>
+                    <CompanyName LegalInd="false"/>
+                </CompanyInfo>
+            </Profile>
+            <AccountInfo>
+                <MemberInfo Type="18" ID="" ID_Context="accor" DefaultInbd="false"/>
+                <MemberPreferences>
+                    <Offer>
+                        <Communication DistribType="1">
+                            <ComDescription>Fax Number Business
+                            </ComDescription>
+                        </Communication>
+                        <Communication number="FINANCEIROSP@MARQUESPAN.COM.BR" DistribType="2">
+                            <ComDescription>Email Address Business
+                            </ComDescription>
+                        </Communication>
+                        <Communication number="+1534511999" DistribType="10">
+                            <ComDescription>Mobile Phone Number
+                            </ComDescription>
+                        </Communication>
+                        <Communication number="+32984622700" DistribType="16">
+                            <ComDescription>Business Phone Number
+                            </ComDescription>
+                        </Communication>
+                    </Offer>
+                </MemberPreferences>
+            </AccountInfo>
+            <ProfileAdditionalInfos>
+                <NegotiatedRates>
+                    <Rates>
+                        <Rate RateCode=""/>
+                    </Rates>
+                </NegotiatedRates>
+            </ProfileAdditionalInfos>
+        </ProfileInfo>
+    </Profiles>
+
+    <PermanentBillings>
+        <PermBillingInfo PmsSeqNbr="65841" CreateDateTime="2022-01-26T09:43:00" LastModifyDateTime="2022-01-26T09:45:00" CreatorID="VGM" LastModifierID="VGM" MainMarketTracking="">
+            <PermBillingID Type="BIL" ID="65841" ID_Context="accor">
+                <BillingRefs>
+                    <ProfileID ID_Context="accor" ProfileType="6"/>
+                    <ProfileID ID="55050" ID_Context="accor" ProfileType="1"/>
+                    <ProfileID ID="55103" ID_Context="accor" ProfileType="3"/>
+                </BillingRefs>
+            </PermBillingID>
+            <BillingGlobalInfo>
+                <TimeSpan Start="2022-01-26" End="2022-01-26"/>
+            </BillingGlobalInfo>
+        </PermBillingInfo>
+        <PermBillingInfo PmsSeqNbr="65850" CreateDateTime="2022-01-26T13:50:00" LastModifyDateTime="2022-01-27T00:03:00" CreatorID="@R1" LastModifierID="@N1" MainMarketTracking="">
+            <PermBillingID Type="BIL" ID="65850" ID_Context="accor">
+                <BillingRefs>
+                    <ProfileID ID_Context="accor" ProfileType="1"/>
+                    <ProfileID ID_Context="accor" ProfileType="3"/>
+                    <ProfileID ID_Context="accor" ProfileType="6"/>
+                </BillingRefs>
+            </PermBillingID>
+            <BillingGlobalInfo>
+                <TimeSpan Start="2022-01-26" End="2022-01-26"/>
+            </BillingGlobalInfo>
+        </PermBillingInfo>
+    </PermanentBillings>
+
+    <HotelReservations>
+        <HotelReservation RoomStayReservation="1" CreateDateTime="2020-07-06T19:49:00" LastModifyDateTime="2022-01-07T19:42:00" CreatorID="ERICK" LastModifierID="LCR" ResStatus="I" DepositIndicator="0" PmsSeqNbr="42554" PurposeTracking="B" DistributionTracking="1A" REVTracking="TA" MainMarketTracking="R" HOMTracking="BR">
+            <ReservationID Type="14" ID="42554" ID_Context="accor"/>
+            <ReservationRefs>
+                <ProfileRefs>
+                    <ProfileRef Type="1" ID="25292" ID_Context="accor"/>
+                    <ProfileRef Type="4" ID_Context="accor"/>
+                    <ProfileRef Type="5" ID_Context="accor"/>
+                </ProfileRefs>
+                <ProfileRef Type="18" RefID_Source="tars" RefID_SourceContext="accor"/>
+                <ProfileRef Type="18" RefID_Source="tars" RefID_SourceContext="contact_name"/>
+                <ProfileRef Type="18" RefID_Source="tars" RefID_SourceContext="ext_ref"/>
+                <ProfileRef Type="18" RefID_Source="tars" RefID_SourceContext="tars-file"/>
+                <ProfileRef Type="18" RefID_Source="tars" RefID_SourceContext="tars-key"/>
+                <ProfileRef Type="18" RefID_Source="tars" RefID_SourceContext="tars-main-cro"/>
+                <ProfileRef Type="18" RefID_Source="tars" RefID_SourceContext="tars-name-cro"/>
+                <ProfileRef Type="18" RefID_Source="tars" RefID_SourceContext="tars-reservation"/>
+                <ProfileRef Type="18" RefID_Source="tars" RefID_SourceContext="tars-sub-cro"/>
+                <ProfileRef Type="18" RefID_Value="28495" RefID_Source="tars" RefID_SourceContext="accor"/>
+            </ReservationRefs>
+            <Fees>
+                <Fee TaxInclusive="True" Type="Exclusive" FeeID="DBD" EffectiveDate="2020-07-07" ExpireDate="2020-07-08" Amount="000" CurrencyCode="BRL" MaxChargeUnitApplies="1" MaxChargeFrequencyApplies="2"/>
+                <Fee TaxInclusive="True" Type="Exclusive" FeeID="DBD" EffectiveDate="2020-07-08" ExpireDate="2020-07-09" Amount="000" CurrencyCode="BRL" MaxChargeUnitApplies="1" MaxChargeFrequencyApplies="2"/>
+                <Fee TaxInclusive="True" Type="Exclusive" FeeID="DBD" EffectiveDate="2020-07-09" ExpireDate="2020-07-10" Amount="000" CurrencyCode="BRL" MaxChargeUnitApplies="1" MaxChargeFrequencyApplies="2"/>
+            </Fees>
+
+            <ResGlobalInfo>
+                <TimeSpan Start="2020-07-07" End="2022-02-05"/>
+                <GuestCounts>
+                    <GuestCount AgeQualifyingCode="10" Count="1"/>
+                    <GuestCount AgeQualifyingCode="8" Count="0"/>
+                </GuestCounts>
+                <Guarantee GuaranteeCode="B"/>
+            </ResGlobalInfo>
+            <RoomStays>
+                <RoomStay>
+                    <RoomTypes>
+                        <RoomType RoomType="DBD" RoomID="568" Quantity="1"/>
+                    </RoomTypes>
+                    <RoomRates>
+                        <RoomRate>
+                            <Rates>
+                                <Rate RateCode="1A" FreeRateInd="No" HouseUseRateInd="No">
+                                    <Total AmountAfterTax="2103040" CurrencyCode="BRL"/>
+                                </Rate>
+                            </Rates>
+                        </RoomRate>
+                    </RoomRates>
+                </RoomStay>
+            </RoomStays>
+            <ResAdditionalInfos>
+                <StatusDetails>
+                    <StatusDetail>
+                        <StatusID Type="14" ID="692579" ID_Context="accor"/>
+                    </StatusDetail>
+                    <StatusDetail>
+                        <StatusID Type="15" ID_Context="accor">
+                            <ContextDescription/>
+                        </StatusID>
+                    </StatusDetail>
+                </StatusDetails>
+                <SequenceRates>
+                    <Rate EffectiveDate="2020-07-07" ExpireDate="2020-07-08" RateCode="HOUSE">
+                        <Total AmountAfterTax="000" CurrencyCode="BRL"/>
+                    </Rate>
+                    <Rate EffectiveDate="2020-07-08" ExpireDate="2020-07-09" RateCode="HOUSE">
+                        <Total AmountAfterTax="000" CurrencyCode="BRL"/>
+                    </Rate>
+                </SequenceRates>
+                <StatusDetails>
+                    <CheckInOutDetail>
+                        <CheckIn OriginDate="2020-07-07" OriginDateTime="2020-07-07T18:09:00" PreRegisteredCheckinInd="No"/>
+                        <CheckOut OriginDate="2022-02-05" OriginDateTime="2020-08-05T00:00:00" ScheduledCheckoutInd="No" SendFolioByEmailInd="No" IsWelcomeStayInd="No"/>
+                    </CheckInOutDetail>
+                </StatusDetails>
+            </ResAdditionalInfos>
+        </HotelReservation>
+    </HotelReservations>
+
+    <Folios>
+        <Folio Type="BIL" Number="0" ID="65724" ID_Context="accor" Start="2022-01-23">
+            <FolioReferenceIDs>
+                <FolioReferenceID Type="14" ID="90072" ID_Context="accor"/>
+                <FolioReferenceID Type="18" ID="0" ID_Context="accor"/>
+                <FolioReferenceID Type="21" ID="23228" ID_Context="accor"/>
+                <FolioReferenceID Type="33" ID="65724" ID_Context="accor"/>
+                <FolioReferenceID Type="9" ID="0" ID_Context="accor"/>
+            </FolioReferenceIDs>
+            <FolioPostings>
+                <FolioPosting PurposeTracking="B" DistributionTracking="1A" REVTracking="TA" MainMarketTracking="R" HOMTracking="BR">
+                    <PostingTransaction TransactionCode="DBD" TransactionType="14">
+                        <Description>Db bed Std
+                        </Description>
+                    </PostingTransaction>
+                    <Posting ID_Context="accor" RoomNumber="257" CreateDateTime="2022-01-27T00:02:00" AccountingDate="2022-01-26" LignDate="2022-01-26" RateCode="RAC">
+                        <ReferenceID Type="34" ID_Context="accor"/>
+                        <ReferenceID Type="35" ID_Context="accor"/>
+                        <ReferenceID Type="36" ID_Context="accor"/>
+                        <ReferenceID ID="90072" Type="14" ID_Context="accor"/>
+                        <CreatorOfProfileID Type="10" ID="23228" ID_Context="accor"/>
+                        <FolioCharges>
+                            <FolioCharge Amount="8500" UsedCurrencyCode="BRL" Qty="1" PaxQty="1">
+                                <Calculation>
+                                    <CalculationUnit AmountBeforeTax="8500">
+                                        <TaxAmount Total="000" Percentage="0.00"/>
+                                    </CalculationUnit>
+                                </Calculation>
+                            </FolioCharge>
+                        </FolioCharges>
+                    </Posting>
+                </FolioPosting>
+                <FolioPosting PurposeTracking="B" DistributionTracking="1A" REVTracking="TA" MainMarketTracking="R" HOMTracking="BR">
+                    <PostingTransaction TransactionCode="7500" TransactionType="14">
+                        <Description>ISS
+                        </Description>
+                    </PostingTransaction>
+                    <Posting ID_Context="accor" RoomNumber="257" CreateDateTime="2022-01-27T00:02:00" AccountingDate="2022-01-26" LignDate="2022-01-26" RateCode="FIX">
+                        <ReferenceID Type="34" ID_Context="accor"/>
+                        <ReferenceID Type="35" ID_Context="accor"/>
+                        <ReferenceID Type="36" ID_Context="accor"/>
+                        <ReferenceID ID="90072" Type="14" ID_Context="accor"/>
+                        <CreatorOfProfileID Type="10" ID="23228" ID_Context="accor"/>
+                        <FolioCharges>
+                            <FolioCharge Amount="255" UsedCurrencyCode="BRL" Qty="1" PaxQty="0">
+                                <Calculation>
+                                    <CalculationUnit AmountBeforeTax="255">
+                                        <TaxAmount Total="000" Percentage="0.00"/>
+                                    </CalculationUnit>
+                                </Calculation>
+                            </FolioCharge>
+                        </FolioCharges>
+                    </Posting>
+                </FolioPosting>
+            </FolioPostings>
+        </Folio>
+
+
+        <FinalFolios>
+            <Folio Type="BIL" Number="39640" ID="65744" ID_Context="accor" Start="2022-01-24" End="2022-01-27">
+                <FolioReferenceIDs>
+                    <FolioReferenceID Type="14" ID="90186" ID_Context="accor"/>
+                    <FolioReferenceID Type="18" ID="0" ID_Context="accor"/>
+                    <FolioReferenceID Type="21" ID="52432" ID_Context="accor"/>
+                    <FolioReferenceID Type="33" ID="65744" ID_Context="accor"/>
+                    <FolioReferenceID Type="9" ID="58660" ID_Context="accor"/>
+                </FolioReferenceIDs>
+                <FolioPostings>
+                    <FolioPosting PurposeTracking="B" DistributionTracking="1A" REVTracking="TA" MainMarketTracking="R" HOMTracking="BR">
+                        <PostingTransaction TransactionCode="2040" TransactionType="16">
+                            <Description>Breakfast
+                            </Description>
+                        </PostingTransaction>
+                        <Posting ID_Context="accor" RoomNumber="266" CreateDateTime="2022-01-26T00:09:00" AccountingDate="2022-01-26" LignDate="2022-01-25" RateCode="RAC">
+                            <ReferenceID Type="34" ID_Context="accor"/>
+                            <ReferenceID Type="35" ID_Context="accor"/>
+                            <ReferenceID Type="36" ID_Context="accor"/>
+                            <ReferenceID ID="90186" Type="14" ID_Context="accor"/>
+                            <CreatorOfProfileID Type="10" ID="52432" ID_Context="accor"/>
+                            <FolioCharges>
+                                <FolioCharge Amount="1499" UsedCurrencyCode="BRL" Qty="1" PaxQty="0">
+                                    <Calculation>
+                                        <CalculationUnit AmountBeforeTax="1499">
+                                            <TaxAmount Total="000" Percentage="0.00"/>
+                                        </CalculationUnit>
+                                    </Calculation>
+                                </FolioCharge>
+                            </FolioCharges>
+                        </Posting>
+                    </FolioPosting>
+
+
+                    <FolioPosting PurposeTracking="B" DistributionTracking="1A" REVTracking="TA" MainMarketTracking="R" HOMTracking="BR">
+                        <PostingTransaction TransactionCode="DBD" TransactionType="14">
+                            <Description>Db bed Std
+                            </Description>
+                        </PostingTransaction>
+                        <Posting ID_Context="accor" RoomNumber="266" CreateDateTime="2022-01-27T00:02:00" AccountingDate="2022-01-26" LignDate="2022-01-26" RateCode="RAC">
+                            <ReferenceID Type="34" ID_Context="accor"/>
+                            <ReferenceID Type="35" ID_Context="accor"/>
+                            <ReferenceID Type="36" ID_Context="accor"/>
+                            <ReferenceID ID="90186" Type="14" ID_Context="accor"/>
+                            <CreatorOfProfileID Type="10" ID="52432" ID_Context="accor"/>
+                            <FolioCharges>
+                                <FolioCharge Amount="9800" UsedCurrencyCode="BRL" Qty="1" PaxQty="1">
+                                    <Calculation>
+                                        <CalculationUnit AmountBeforeTax="9800">
+                                            <TaxAmount Total="000" Percentage="0.00"/>
+                                        </CalculationUnit>
+                                    </Calculation>
+                                </FolioCharge>
+                            </FolioCharges>
+                        </Posting>
+                    </FolioPosting>
+                    <FolioPosting PurposeTracking="B" DistributionTracking="1A" REVTracking="TA" MainMarketTracking="R" HOMTracking="BR">
+                        <FolioPosting PurposeTracking="B" DistributionTracking="1A" REVTracking="TA" MainMarketTracking="R" HOMTracking="BR">
+                            <PostingTransaction TransactionCode="DBD" TransactionType="14">
+                                <Description>Db bed Std
+                                </Description>
+                            </PostingTransaction>
+                            <Posting ID_Context="accor" RoomNumber="266" CreateDateTime="2022-01-27T00:02:00" AccountingDate="2022-01-26" LignDate="2022-01-26" RateCode="RAC">
+                                <ReferenceID Type="34" ID_Context="accor"/>
+                                <ReferenceID Type="35" ID_Context="accor"/>
+                                <ReferenceID Type="36" ID_Context="accor"/>
+                                <ReferenceID ID="90186" Type="14" ID_Context="accor"/>
+                                <CreatorOfProfileID Type="10" ID="52432" ID_Context="accor"/>
+                                <FolioCharges>
+                                    <FolioCharge Amount="9800" UsedCurrencyCode="BRL" Qty="1" PaxQty="1">
+                                        <Calculation>
+                                            <CalculationUnit AmountBeforeTax="9800">
+                                                <TaxAmount Total="000" Percentage="0.00"/>
+                                            </CalculationUnit>
+                                        </Calculation>
+                                    </FolioCharge>
+                                </FolioCharges>
+                            </Posting>
+                        </FolioPosting>
+                    </FolioPostings>
+                </Folio>
+            </FinalFolios>
+            <HotelStatistics>
+                <HotelStatistic>
+                    <HotelStatisticApplicationSets>
+                        <HotelStatisticApplicationSet Start="2022-01-26">
+                            <StatisticSummaries>
+                                <StatisticSummary>
+                                    <StatisticCode StatCategoryCode="3" StatCode="ROH"/>
+                                    <CountCategorySummary CountCategoryCode="23" SummaryCount="0"/>
+                                    <CountCategorySummary CountCategoryCode="24" SummaryCount="0"/>
+                                    <CountCategorySummary CountCategoryCode="25" SummaryCount="0"/>
+                                    <CountCategorySummary CountCategoryCode="26" SummaryCount="0"/>
+                                    <CountCategorySummary CountCategoryCode="27" SummaryCount="0"/>
+                                    <CountCategorySummary CountCategoryCode="28" SummaryCount="0"/>
+                                    <CountCategorySummary CountCategoryCode="29" SummaryCount="0"/>
+                                    <CountCategorySummary CountCategoryCode="30" SummaryCount="0"/>
+                                    <CountCategorySummary CountCategoryCode="31" SummaryCount="1"/>
+                                </StatisticSummary>
+                            </StatisticSummaries>
+                        </HotelStatisticApplicationSet>
+                    </HotelStatisticApplicationSets>
+                </HotelStatistic>
+            </HotelStatistics>
+        </OTA_HotelPmsInfoNotif>
