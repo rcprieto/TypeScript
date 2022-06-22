@@ -13,12 +13,12 @@ const {
 mongoose
   .connect(process.env.CONNECTIONSTRING, {
     useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useFindAndModify: false
+    useUnifiedTopology: true
+
   })
   .then(() => {
     console.log("DB Connected!");
-    app.emit("Ready");
+    app.emit("Ready.");
   })
   .catch((e) => console.log(e));
 
@@ -37,7 +37,7 @@ const csrf = require('csurf');
 
 const sessionOption = session({
   secret: "JKanhskhashujnaJHhnkjNHAIUHDs#343jaçã#@",
-  store: new MongoStore({
+  store: MongoStore.create({
     mongoUrl: process.env.CONNECTIONSTRING
   }),
   resave: false,
@@ -75,10 +75,10 @@ app.use(routes);
 
 //Só começa a rodar o sistema depois da conexão do DB
 app.on("Ready", () => {
-  app.listen(3200, () => {
+  app.listen(3201, () => {
     console.log(
-      "Server Running on port 3200.",
-      "Acessar http://localhost:3200"
+      "Server Running on port 3201.",
+      "Acessar http://localhost:3201"
     );
   });
 });
