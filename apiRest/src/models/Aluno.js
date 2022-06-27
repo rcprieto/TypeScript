@@ -5,12 +5,61 @@ import Sequelize, {
 export default class Aluno extends Model {
   static init(sequelize) {
     super.init({
-      nome: Sequelize.STRING(150),
-      sobrenome: Sequelize.STRING(150),
-      email: Sequelize.STRING(150),
-      idade: Sequelize.INTEGER,
-      peso: Sequelize.FLOAT,
-      altura: Sequelize.FLOAT,
+      nome: {
+        type: Sequelize.STRING(150),
+        defaultValue: '',
+        validate: {
+          len: {
+            args: [3, 150],
+            msg: 'Nome deve ter entre 3 e 5 caracteres',
+          },
+        },
+      },
+      sobrenome: {
+        type: Sequelize.STRING(150),
+        defaultValue: '',
+        validate: {
+          len: {
+            args: [3, 150],
+            msg: 'Nome deve ter entre 3 e 5 caracteres',
+          },
+        },
+      },
+      email: {
+        type: Sequelize.STRING(150),
+        validate: {
+          isEmail: {
+            msg: 'E-mail inválido',
+          },
+          unique: {
+            msg: 'E-mail already exists',
+          },
+        },
+      },
+      idade: {
+        type: Sequelize.INTEGER,
+        validate: {
+          isInt: {
+            msg: 'Idade precisa ser um número inteiro',
+          },
+        },
+      },
+      peso: {
+        type: Sequelize.FLOAT,
+        validate: {
+          isFloat: {
+            msg: 'Peso precisa ser um número',
+          },
+        },
+      },
+      altura: {
+        type: Sequelize.FLOAT,
+        validate: {
+          isFloat: {
+            msg: 'Altura precisa ser um número',
+          },
+        },
+      },
     }, {
       sequelize,
     });

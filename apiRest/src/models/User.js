@@ -28,6 +28,10 @@ export default class User extends Model {
       email: {
         type: Sequelize.STRING(150),
         defaultValue: '',
+        unique: {
+          arg: true,
+          msg: 'This email already exists',
+        },
         validate: {
           notEmpty: {
             msg: 'Campo email não pode ser nulo',
@@ -38,9 +42,6 @@ export default class User extends Model {
           },
           isEmail: {
             msg: 'Preencha um email válido.',
-          },
-          unique: {
-            msg: 'Email já existe!',
           },
         },
 
@@ -64,9 +65,15 @@ export default class User extends Model {
     });
 
     this.addHook('beforeSave', async (user) => {
-      user.password_hash = await bcryptjs.hash(user.password, 8);
+      if (user.password) {
+        user.password_hash = await bcryptjs.hash(user.password, 8);
+      }
     });
 
     return this;
+  }
+
+  passwordIsValid(password) {
+    return bcryptjs.compare(password, this.password_hash);
   }
 }
