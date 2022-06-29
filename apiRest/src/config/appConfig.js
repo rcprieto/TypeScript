@@ -1,3 +1,3 @@
 export default {
-  url: 'http://localhost:3010/images',
+  url: process.env.APP_URL,
 };
