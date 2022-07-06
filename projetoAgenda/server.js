@@ -18,7 +18,7 @@ mongoose
   })
   .then(() => {
     console.log("DB Connected!");
-    app.emit("Ready.");
+    app.emit("Ready");
   })
   .catch((e) => console.log(e));
 
@@ -67,9 +67,6 @@ app.use(middlewareGlobal);
 
 app.set("views", path.resolve(__dirname, "src", "views"));
 app.set("view engine", "ejs");
-
-
-
 
 app.use(routes);
 
