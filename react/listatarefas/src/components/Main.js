@@ -1,48 +1,112 @@
-import React, {Component} from 'react';
-import { FaPlus } from 'react-icons/fa'
-import { FaEdit, FaWindowClose } from 'react-icons/fa'
+import React, { Component } from 'react';
+
+import Form from './Form';
+import Tarefas from './Tarefas';
 import './Main.css';
 
 
-export default class Main extends Component{
+export default class Main extends Component {
 
   state = {
     novaTarefa: '',
-    tarefas: [
-      'Fazer Café',
-      'Beber Água'
-    ],
+    tarefas: [],
+    index: -1,
   };
 
+
+  componentDidMount() {
+
+    if (localStorage.getItem('tarefas')) {
+      const { tarefas } = JSON.parse(localStorage.getItem('tarefas'));
+      if (!tarefas) return;
+
+      this.setState({
+        tarefas
+      });
+    }
+    else {
+      return;
+    }
+
+
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    const { tarefas } = this.state;
+    if (tarefas === prevState.tarefas) return;
+    localStorage.setItem('tarefas', JSON.stringify(tarefas));
+  }
+
+  handleSubmit = (e) => {
+    e.preventDefault();
+    const { tarefas, index } = this.state;
+    let { novaTarefa } = this.state;
+    novaTarefa = novaTarefa.trim();
+
+    if (tarefas.indexOf(novaTarefa) !== -1) return;
+
+    const novasTarefas = [...tarefas];
+
+    if (index === -1) {
+      this.setState({
+        tarefas: [...novasTarefas, novaTarefa],
+        novaTarefa: "",
+      });
+    }
+    else {
+      novasTarefas[index] = novaTarefa;
+      this.setState({
+        tarefas: [...novasTarefas],
+        index: -1,
+        novaTarefa: "",
+      });
+    }
+
+
+  }
   handleChange = (e) => {
     this.setState({
       novaTarefa: e.target.value,
     });
   }
 
-  render (){
+  handleEdit = (e, index) => {
+    const { tarefas } = this.state;
+    this.setState({
+      index,
+      novaTarefa: tarefas[index],
+    });
 
-    const {novaTarefa, tarefas} = this.state;
+  }
+
+  handleDelete = (e, index) => {
+
+    const { tarefas } = this.state;
+    const novasTarefas = [...tarefas];
+    novasTarefas.splice(index, 1);
+    this.setState({
+      tarefas: [...novasTarefas],
+    });
+
+  }
+
+
+  render() {
+
+    const { novaTarefa, tarefas } = this.state;
 
     return (
       <div className='main'>
-      <h1>Lista de Tarefas</h1>
-      <form action="#" className="form">
-      <input type="text" onChange={this.handleChange} value={novaTarefa} />
-      <button type="submit">
-        <FaPlus></FaPlus>
-      </button>
-      </form>
-      <ul className="tarefas">
-        {tarefas.map((t) => (
-          <li key={t}>{t}
-          <div>
-            <FaEdit className='edit'></FaEdit>
-            <FaWindowClose className="delete"></FaWindowClose>
-          </div>
-          </li>
-        ))}
-      </ul>
+        <h1>Lista de Tarefas</h1>
+        <Form handleSubmit={this.handleSubmit}
+          handleChange={this.handleChange}
+          novaTarefa={this.novaTarefa} />
+
+        <Tarefas handleEdit={this.handleEdit}
+          handleDelete={this.handleDelete}
+          tarefas={this.tarefas} />
+
+
       </div>
     )
   }
